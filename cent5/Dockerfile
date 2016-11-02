@@ -33,5 +33,7 @@ RUN git clone git://github.com/robbyrussell/oh-my-zsh.git /root/.oh-my-zsh && \
 
 RUN mkdir -p /root/rpmbuild/{BUILD,RPMS,SOURCES,SPECS,SRPMS}
 
+WORKDIR /root
+
 # enter as zsh
 CMD /bin/zsh
