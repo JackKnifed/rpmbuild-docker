@@ -9,7 +9,7 @@ To be used to test building RPMS on CentOS 7
 ## CentOS 5
 ### build in cwd with ###
 ```
-docker build -t jackknifed/rpmbuild:cent5 rpmbuild.cent5.dockerfile
+docker build -t jackknifed/rpmbuild:cent5 cent5
 ```
 
 ### run with ###
@@ -24,7 +24,7 @@ docker run -i -t --rm jackknifed/rpmbuild:cent5 \
 ## CentOS 6
 ### build in cwd with ###
 ```
-docker build -t jackknifed/rpmbuild:cent6 rpmbuild.cent6.dockerfile
+docker build -t jackknifed/rpmbuild:cent6 cent6
 ```
 
 ### run with ###
@@ -39,7 +39,7 @@ docker run -i -t --rm jackknifed/rpmbuild:cent6 \
 ## CentOS 7 ##
 ### build in cwd with ###
 ```
-docker build -t jackknifed/rpmbuild:cent7 rpmbuild.cent7.dockerfile
+docker build -t jackknifed/rpmbuild:cent7 cent7
 ```
 
 ### run with ###
