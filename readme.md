@@ -15,6 +15,7 @@ docker build -t jackknifed/rpmbuild:cent5 cent5
 ### run with ###
 ```
 docker run -i -t --rm \
+ -v $(pwd)/:/root/ \
  -v $(pwd)/rpms/:/root/rpmbuild/RPMS \
  -v $(pwd)/srpms/:/root/rpmbuild/SRPMS \
  -v $(pwd)/specs/:/root/rpmbuild/SPECS \
@@ -31,6 +32,7 @@ docker build -t jackknifed/rpmbuild:cent6 cent6
 ### run with ###
 ```
 docker run -i -t --rm \
+ -v $(pwd)/:/root/ \
  -v $(pwd)/rpms/:/root/rpmbuild/RPMS \
  -v $(pwd)/srpms/:/root/rpmbuild/SRPMS \
  -v $(pwd)/specs/:/root/rpmbuild/SPECS \
@@ -47,6 +49,7 @@ docker build -t jackknifed/rpmbuild:cent7 cent7
 ### run with ###
 ```
 docker run -i -t --rm jackknifed/rpmbuild:cent7 \
+ -v $(pwd)/:/root/ \
  -v $(pwd)/rpms/:/root/rpmbuild/RPMS \
  -v $(pwd)/srpms/:/root/rpmbuild/SRPMS \
  -v $(pwd)/specs/:/root/rpmbuild/SPECS \
