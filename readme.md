@@ -48,7 +48,7 @@ docker build -t jakdept/rpmbuild:cent7 cent7
 
 ### run with ###
 ```
-docker run -i -t --rm jakdept/rpmbuild:cent7 \
+docker run -i -t --rm \
  -v $(pwd)/:/root/ \
  -v $(pwd)/rpms/:/root/rpmbuild/RPMS \
  -v $(pwd)/srpms/:/root/rpmbuild/SRPMS \
