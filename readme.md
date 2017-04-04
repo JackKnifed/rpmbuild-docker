@@ -2,7 +2,7 @@
 ### required directories ###
 
 ```
-mkdir rpms srpms specs sources
+mkdir RPMS SRPMS SPECS SOURCES
 ```
 To be used to test building RPMS on CentOS 7
 
@@ -16,10 +16,10 @@ docker build -t jakdept/rpmbuild:cent5 cent5
 ```
 docker run -i -t --rm \
  -v $(pwd)/:/root/ \
- -v $(pwd)/rpms/:/root/rpmbuild/RPMS \
- -v $(pwd)/srpms/:/root/rpmbuild/SRPMS \
- -v $(pwd)/specs/:/root/rpmbuild/SPECS \
- -v $(pwd)/sources/:/root/rpmbuild/SOURCES \
+ -v $(pwd)/RPMS/:/root/rpmbuild/RPMS \
+ -v $(pwd)/SRPMS/:/root/rpmbuild/SRPMS \
+ -v $(pwd)/SPECS/:/root/rpmbuild/SPECS \
+ -v $(pwd)/SOURCES/:/root/rpmbuild/SOURCES \
  jakdept/rpmbuild:cent5
 ```
 
@@ -33,10 +33,10 @@ docker build -t jakdept/rpmbuild:cent6 cent6
 ```
 docker run -i -t --rm \
  -v $(pwd)/:/root/ \
- -v $(pwd)/rpms/:/root/rpmbuild/RPMS \
- -v $(pwd)/srpms/:/root/rpmbuild/SRPMS \
- -v $(pwd)/specs/:/root/rpmbuild/SPECS \
- -v $(pwd)/sources/:/root/rpmbuild/SOURCES \
+ -v $(pwd)/RPMS/:/root/rpmbuild/RPMS \
+ -v $(pwd)/SRPMS/:/root/rpmbuild/SRPMS \
+ -v $(pwd)/SPECS/:/root/rpmbuild/SPECS \
+ -v $(pwd)/SOURCES/:/root/rpmbuild/SOURCES \
  jakdept/rpmbuild:cent6
 ```
 
@@ -50,9 +50,9 @@ docker build -t jakdept/rpmbuild:cent7 cent7
 ```
 docker run -i -t --rm \
  -v $(pwd)/:/root/ \
- -v $(pwd)/rpms/:/root/rpmbuild/RPMS \
- -v $(pwd)/srpms/:/root/rpmbuild/SRPMS \
- -v $(pwd)/specs/:/root/rpmbuild/SPECS \
- -v $(pwd)/sources/:/root/rpmbuild/SOURCES \
+ -v $(pwd)/RPMS/:/root/rpmbuild/RPMS \
+ -v $(pwd)/SRPMS/:/root/rpmbuild/SRPMS \
+ -v $(pwd)/SPECS/:/root/rpmbuild/SPECS \
+ -v $(pwd)/SOURCES/:/root/rpmbuild/SOURCES \
  jakdept/rpmbuild:cent7
 ```
