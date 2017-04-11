@@ -13,7 +13,7 @@ docker build -t jakdept/rpmbuild:ops-cent6 cent6
 ```
 docker run -i -t --rm \
  -v $(pwd)/:/home/rpmbuild/packages \
- jakdept/rpmbuild:cent6
+ jakdept/rpmbuild:ops-cent6
 ```
 
 ## CentOS 7 ##
@@ -26,5 +26,5 @@ docker build -t jakdept/rpmbuild:ops-cent7 cent7
 ```
 docker run -i -t --rm \
  -v $(pwd)/:/home/rpmbuild/packages \
- jakdept/rpmbuild:cent7
+ jakdept/rpmbuild:ops-cent7
 ```
