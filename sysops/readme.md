@@ -12,7 +12,7 @@ docker build -t jakdept/rpmbuild:ops-cent6 cent6
 ### run with ###
 ```
 docker run -i -t --rm \
- -v $(pwd) \
+ -v $(pwd):/home/rpmbuild/packages \
  jakdept/rpmbuild:ops-cent6
 ```
 
@@ -25,6 +25,6 @@ docker build -t jakdept/rpmbuild:ops-cent7 cent7
 ### run with ###
 ```
 docker run -i -t --rm \
- -v $(pwd) \
+ -v $(pwd):/home/rpmbuild/packages \
  jakdept/rpmbuild:ops-cent7
 ```

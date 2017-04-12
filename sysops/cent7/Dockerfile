@@ -3,7 +3,7 @@
 FROM centos:7
 MAINTAINER Jack Hayhurst <jhayhurst@liquidweb.com>
 
-RUN adduser rpmbuild
+RUN adduser -u 1000 rpmbuild
 
 # install build tools
 RUN yum install -y \
