@@ -25,6 +25,8 @@ RUN		chsh -s /bin/zsh rpmbuild
 USER rpmbuild
 WORKDIR /home/rpmbuild
 
+RUN echo '%_topdir    /home/rpmbuild/packages/rpmbuild' >> /home/rpmbuild/.rpmmacros
+
 RUN mkdir -p /home/rpmbuild/packages
 
 # install zshrc
