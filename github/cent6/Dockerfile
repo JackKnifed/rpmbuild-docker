@@ -33,6 +33,7 @@ RUN ln -s /home/rpmbuild/package /home/rpmbuild/RPMS
 
 RUN echo '%_topdir    /home/rpmbuild' >> /home/rpmbuild/.rpmmacros
 
+COPY gitconfig /home/rpmbuild/.gitconfig
 COPY gitignore /home/rpmbuild/.gitignore
 
 # install zshrc
