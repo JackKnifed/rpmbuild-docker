@@ -57,3 +57,42 @@ Run from the root of the sysops repository with:
 ```
 docker run -i -t --rm -v $(pwd):/home/rpmbuild/packages jakdept/rpmbuild-ops:cent7
 ```
+
+## MySQL Containers ##
+
+### MySQL 5.1 ###
+
+Docker image for MySQL 5.1.73 database based on official [MySQL](https://hub.docker.com/_/mysql/) image
+
+Build from the root of this repo:
+
+```bash
+docker build -t jakdept/mysql:51 mysql-5.1
+```
+
+Start instance with no existing data:
+
+```bash
+docker run -it --rm -p 3307:3306 jakdept/mysql:51
+```
+
+Start instance based on datadir in folder `./datadir` with configuration `./etc.my.cnf` and `./root.my.cnf`.
+
+```bash
+docker run -it --rm \
+  -p 3306:3306 \
+  -v $(pwd)/datadir:/var/lib/mysql \
+  -v $(pwd)/etc.my.cnf:/etc/my.cnf \
+  -v $(pwd)/root.my.cnf:/root/.my.cnf \
+  jakdept/mysql51
+```
+
+Shell access to running container
+
+```bash
+docker exec -it jakdept/mysql:51 /bin/bash
+```
+
+```bash
+docker logs jakdept/mysql:51
+```
