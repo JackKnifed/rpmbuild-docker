@@ -13,7 +13,7 @@ RUN yum install -y \
 			gcc \
 			zsh
 
-VOLUME "/home/rpmbuild/package"
+VOLUME "/home/rpmbuild/packages"
 
 # install zshrc
 RUN git clone git://github.com/robbyrussell/oh-my-zsh.git ~/.oh-my-zsh && \
@@ -27,11 +27,11 @@ WORKDIR /home/rpmbuild
 
 RUN mkdir -p /home/rpmbuild
 
-RUN ln -s /home/rpmbuild/package /home/rpmbuild/SPECS
-RUN ln -s /home/rpmbuild/package /home/rpmbuild/SOURCES
-RUN ln -s /home/rpmbuild/package /home/rpmbuild/RPMS
+RUN echo '%_topdir    /home/rpmbuild/packages' >> /home/rpmbuild/.rpmmacros
 
-RUN echo '%_topdir    /home/rpmbuild' >> /home/rpmbuild/.rpmmacros
+# RUN ln -s /home/rpmbuild/package /home/rpmbuild/SPECS
+# RUN ln -s /home/rpmbuild/package /home/rpmbuild/SOURCES
+# RUN ln -s /home/rpmbuild/package /home/rpmbuild/RPMS
 
 COPY gitconfig /home/rpmbuild/.gitconfig
 COPY gitignore /home/rpmbuild/.gitignore
