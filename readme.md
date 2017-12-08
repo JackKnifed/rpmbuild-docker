@@ -19,7 +19,7 @@ docker build -t jakdept/rpmbuild:cent6 github-cent6
 Run from the root of the build repository with:
 
 ```
-docker run -i -t --rm -v $(pwd)/:/home/rpmbuild/package jakdept/rpmbuild:cent6
+docker run -i -t --rm -v $(pwd)/:/home/rpmbuild/packages jakdept/rpmbuild:cent6
 ```
 
 ## Github CentOS 7 ##
@@ -30,7 +30,7 @@ docker build -t jakdept/rpmbuild:cent7 github-cent7
 
 Run from the root of the build repository with:
 ```
-docker run -i -t --rm -v $(pwd)/:/home/rpmbuild/package jakdept/rpmbuild:cent7
+docker run -i -t --rm -v $(pwd)/:/home/rpmbuild/packages jakdept/rpmbuild:cent7
 ```
 
 ## Sysops builds ##
