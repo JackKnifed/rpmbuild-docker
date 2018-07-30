@@ -101,7 +101,7 @@ docker logs jakdept/mysql:51
 
 ```bash
 docker build -t jakdept/supermicro SuperMicro
-cp -f SuperMicro/sum ~/bin/
+cp -f SuperMicro/smsum ~/bin/
 ```
 
 Add -h for usage or see the PDF in the folder.
