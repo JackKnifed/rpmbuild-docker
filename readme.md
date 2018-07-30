@@ -96,3 +96,14 @@ docker exec -it jakdept/mysql:51 /bin/bash
 ```bash
 docker logs jakdept/mysql:51
 ```
+
+## SuperMicro SUM ###
+
+```bash
+docker build -t jakdept/supermicro SuperMicro
+```
+
+Add -h for usage or see the PDF in the folder.
+```bash
+docker run -it --rm jakdept/supermicro /home/bin/sum
+```
